@@ -1,0 +1,315 @@
+:root{
+	--max-width:1920px;
+	--max-about-us-width:1000px;
+
+}
+body
+{
+	background-image: url(img/01.png);
+	margin: 0px;
+	padding: 0px;
+}
+.img_presente {
+	width: 35px;
+	margin-right:auto;
+	margin-bottom: 10px;
+
+}
+
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+section
+{
+	width: min(100%, var(--max-width));
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	justify-content: center;
+	height: 95vh;
+	background-image: url("img/01.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+@media screen and (max-width:728px){
+	section{
+		flex-direction: column;
+	}
+	
+}
+
+/* Estilo navegador */
+
+header{
+	width: 100%;
+	background-color: #f5b1db;
+	box-shadow: 3px 3px 12px rgba(0,0,0,0.2);
+}
+nav
+{
+	width: min(100%, var(--max-width));
+	margin-inline: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 3.75rem;
+
+}
+nav img{
+	margin-left: 1rem;
+}
+
+nav ul
+{
+	display: flex;
+}
+
+nav ul li a
+{
+	margin: 28px;
+	font-family: myriad pro regular;
+	color: #505050;
+	font-size: 15px;
+	font-weight: 700;
+}
+nav ul li a:hover{
+	opacity: 0.6;
+}
+
+.active
+{
+	font-weight: bold;
+	color: #da1a6a;
+}
+
+/* Estilo Textos */
+.conteudo-texto p:nth-child(1)
+{
+	font-family: calibri;
+	font-weight:bold;
+	color: #757474;
+	font-size: 22px;
+
+}
+
+.conteudo-texto p:nth-child(2)
+{
+	font-family:'Lucida Sans';
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #da1a6a;
+	font-size: 60px;
+}
+
+.conteudo-texto p:nth-child(3)
+{
+	font-family: myriad pro regular;
+	color: #403e3e;
+	font-size: 30px;
+	line-height: 30px;
+}
+
+.conteudo-texto 
+{
+	line-height: 0px;
+	margin: 45px 0px 25px;	
+}
+
+.conteudo-sobre
+{
+	width: min(100% - 4rem, var(--max-about-us-width));
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0px 0px 60px rgba(225, 27, 109, 0.1);
+	display: flex;
+	margin: -7% auto 20px auto;
+	position: relative;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 3rem 0rem;
+	flex-wrap: wrap;
+} 
+
+/* Estilo Imagem Sobre eu */
+.conteudo-sobre img
+{
+	height: 250px;
+	border-radius: 0.5rem;
+  
+}
+
+.texto-sobre 
+{
+	width:min(100% - 3rem, 550px);
+	color: #ee0f89;
+	font-family: Cambria;
+	font-weight: bold;
+	font-size: 22px;
+
+}
+
+.texto-sobre p
+{
+	color: rgba(0,0,0,0.7);
+	font-family:Lucida Sans Regular;
+	font-size: 1rem;
+	font-weight: 400;
+	list-style: 140%;
+	
+}
+
+.texto-sobre button
+{
+	min-width: 120px;
+	padding: 0.75rem 1.5rem;
+	color: #080808;
+	border:none;
+	font-family: Arial;
+	background-color:#f5b1db;
+	border-radius: 20px;
+	font-size: 0.9rem;
+
+    font-weight: 500;
+	letter-spacing: 1px;
+	transition: 0.3s;
+}
+button:hover
+{
+transform: scale(1.1);
+}
+
+/* Seção de Serviços  */
+
+
+ .servicos-textos{ 
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	width: min(100% - 4rem, var(--max-about-us-width));
+	margin-inline: auto;
+	
+}
+
+.conteudo-box 
+{
+	display: flex;
+    width: min(100% - 4rem, var(--max-about-us-width));
+    margin-inline: auto;
+	gap: 1rem;
+
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	padding: 1rem;
+	position: relative;
+
+}
+
+.conteudo-box::-webkit-scrollbar {
+	height: 0.5rem;
+  }
+  .conteudo-box::-webkit-scrollbar-track {
+	background-color: #ffffff; /* Cor da track */
+	border-radius: 2rem;
+  }
+  
+  .conteudo-box::-webkit-scrollbar-thumb {
+	background-color: #f5b1db; /* Cor da thumb */
+	height: 2px;
+	border-radius: 2rem;
+  }
+
+.conteudo-box div{
+	width: 40%;
+	aspect-ratio: 1/1;
+
+	position: sticky;
+	flex-shrink: 0;
+	object-fit: cover;
+	scroll-behavior: smooth;
+
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-size: cover;
+	background-position: center;
+}
+.conteudo-box div p {
+	color: white;
+	font-size: 2rem;
+	font-weight: 600;
+	margin: 0;
+	text-align: center;
+  }
+  .conteudo-box div a {
+	background: white;
+	border: 0;
+	font-size: 1rem;
+	padding: 0.5rem 1.25rem;
+	border-radius: 1rem;
+	color: brown;
+  }
+
+.box1
+{
+	background-image: linear-gradient(
+      to top,
+      rgb(245, 177, 219, 0.7),
+      rgb(245, 177, 219, 0.7)
+    ),
+    url("img/batizado.jpeg");
+
+}
+
+.box2
+{
+	background-image: linear-gradient(
+      to top,
+      rgb(245, 177, 219, 0.7),
+      rgb(245, 177, 219, 0.7)
+    ),
+    url("img/casamento.jpeg");
+}
+
+
+.box3
+{
+	background-image: linear-gradient(
+      to top,
+      rgb(245, 177, 219, 0.7),
+      rgb(245, 177, 219, 0.7)
+    ),
+    url("img/aniversario.jpeg");
+}
+
+.box4
+{
+	background-image: linear-gradient(
+      to top,
+      rgb(245, 177, 219, 0.7),
+      rgb(245, 177, 219, 0.7)
+    ),
+    url("img/datas\ comemorativas.jpeg");
+}
+
+
+
+/* Seção footer */
+
+footer {
+	text-align: center;
+	background-color:#f5b1db ;
+	padding: 40px 0;
+}
+
+.copyright {
+	color: #FFFFFF;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
